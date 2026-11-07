@@ -1,0 +1,46 @@
+<header class="va-cab">
+ <img class="va-logo" alt="Logotipo de Víctor Arellano" width="29" height="36" src="%%LOGO%%">
+ <div class="va-tit"><b>%%APP%%</b><span>%%GRADO%%</span></div>
+ <button id="btnDonar" class="va-btn va-sec" aria-haspopup="dialog" aria-controls="dlgDonar">Donar</button>
+ <button id="btnAcerca" class="va-btn va-sec" aria-haspopup="dialog" aria-controls="dlgAcerca">Acerca de</button>
+</header>
+<nav>
+ <p id="count"></p>
+ <details><summary>Guía para acompañarlo</summary>
+  <p><b>Para quién:</b> 6.º de primaria en México. Los temas se basan en los contenidos de matemáticas de 6.º de la SEP (Fase 5, Plan 2022); compáralos con el libro de texto de tu grupo.</p>
+  <p><b>Temas:</b> números grandes y decimales, multiplicar y dividir con decimales, fracciones con mixtos, fracción y decimal entre natural, razones, porcentajes, polígonos regulares, círculo y π, plano cartesiano, volumen, unidades de medida, gráficas circulares, media y rango, y probabilidad con árbol.</p>
+  <p><b>Cada ficha:</b> 1) leer una figura, 2) hacer la operación, 3) un reto donde hay que decidir algo: si alcanza, cuál es mayor, qué cuenta sirve o dónde está el error.</p>
+  <p><b>Cómo bajan las ayudas (temas de 5 fichas):</b> ficha 1 con apoyo, 2 y 3 práctica (el modelo viene vacío o solo el contorno), 4 con pista impresa y espacio para su propio dibujo, 5 sin ayudas para comprobar. Los temas de fracciones y porcentajes tienen 10 fichas con la misma idea.</p>
+  <p>Dobla la hoja por la línea punteada antes de entregarla. Acepta respuestas equivalentes (2/4 por 1/2, 0.50 por 0.5) salvo que se pida una forma. Marca cómo resolvió cada ejercicio. Si resuelve solo la última ficha de un tema, pasa al siguiente.</p>
+  <p>En blanco y negro: puntos = parte marcada, rayas = parte agregada, cruces = parte quitada.</p>
+  <p><b>Para guardar en PDF:</b> usa «Imprimir» y elige «Guardar como PDF», tamaño carta.</p>
+ </details>
+ <div class="ctrl">
+  <label>Ficha <select id="pick"></select></label>
+  <button id="prev">Anterior</button><button id="next">Siguiente</button>
+  <button id="toggle" aria-pressed="false">Mostrar respuestas</button>
+  <button id="one">Imprimir esta ficha</button><button id="tema">Imprimir el tema</button><button id="all">Imprimir todo</button>
+  <button id="descargar">Descargar este archivo</button>
+ </div>
+ <p id="aviso" class="va-aviso" role="status" aria-live="polite"></p>
+</nav>
+<main id="pages" class="hide-key"></main>
+<footer class="va-pie">
+ <span>%%AUTOR%% · %%APP%% %%VERSION%% · %%TIPO%% · Licencia <a href="%%LICURL%%" target="_blank" rel="noopener noreferrer">%%LIC%%</a></span>
+ <span><button class="va-link" id="pieAcerca">Acerca de</button> · <button class="va-link" id="pieDonar">Donar</button></span>
+</footer>
+<dialog id="dlgDonar" aria-labelledby="tDonar">
+ <h2 id="tDonar">Apoya este proyecto</h2>
+ <p>%%TEXTO_DONAR%%</p>
+ <div class="va-don"><button class="va-btn" data-donar="mercadoPago">Donar con Mercado Pago</button><button class="va-btn" data-donar="paypal">Donar con PayPal</button></div>
+ <form method="dialog"><button class="va-btn va-sec">Cerrar</button></form>
+</dialog>
+<dialog id="dlgAcerca" aria-labelledby="tAcerca">
+ <div class="va-ac"><img alt="" width="40" height="50" src="%%LOGO%%"><div><h2 id="tAcerca">%%APP%%</h2><p>%%GRADO%% · %%VERSION%% · %%TIPO%%</p></div></div>
+ <p><b>Autor:</b> %%AUTOR%% · <a href="mailto:%%CONTACTO%%">%%CONTACTO%%</a></p>
+ <p><b>Licencia:</b> <a href="%%LICURL%%" target="_blank" rel="noopener noreferrer">%%LIC%%</a>. Puedes usarlo, imprimirlo y adaptarlo dando crédito, sin venderlo y compartiendo tus cambios con la misma licencia.</p>
+ <p><b>Aviso de privacidad:</b> %%PRIVACIDAD%%</p>
+ <p>%%TEXTO_DONAR%%</p>
+ <div class="va-don"><button class="va-btn" data-donar="mercadoPago">Donar con Mercado Pago</button><button class="va-btn" data-donar="paypal">Donar con PayPal</button></div>
+ <form method="dialog"><button class="va-btn va-sec">Cerrar</button></form>
+</dialog>

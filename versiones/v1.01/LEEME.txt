@@ -1,0 +1,21 @@
+﻿Misiones de matemáticas 6.º · v1.01 · Notas para Víctor
+
+Construir la versión HTML:
+  python3 herramientas/construir.py
+  Genera index.html (para GitHub Pages) y web/misiones-matematicas-v1.01-html.html.
+
+Probar:
+  node pruebas/probar.js index.html
+  Resultados en pruebas/resultados/resultado.txt.
+
+Nueva versión:
+  1. Cambia VERSION en src/nucleo/config.js (v1.02, v1.03…).
+  2. Construye y prueba.
+  3. Copia el proyecto a versiones/vN.MM/ (sin la carpeta versiones/).
+
+Publicar en GitHub Pages:
+  Settings > Pages > Deploy from a branch > main / (root).
+  Sitio publicado: https://vic-akd.github.io/misiones-matematicas-6/
+
+App aparte de Misiones de matemáticas 5.º (repositorio misiones-matematicas-5).
+Solo existe la fase 1 (HTML). No hay portable, instalador ni Android.

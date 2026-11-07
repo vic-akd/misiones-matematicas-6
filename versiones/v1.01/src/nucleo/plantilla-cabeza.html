@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Misiones de fracciones · 5.º de primaria</title>
+<style>
+:root{--ink:#18243a;--line:#3d4a60;--soft:#8290a5;--bg:#eef2f7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.4 system-ui,"Segoe UI",sans-serif}
+nav{max-width:840px;margin:20px auto;padding:16px;background:#fff;border-radius:12px}
+nav h1{margin:0 0 4px;font-size:24px}
+nav p{margin:4px 0}
+details{margin:10px 0}
+details p,details li{font-size:15px}
+.ctrl{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+button,select{font:inherit;padding:6px 10px;border:1px solid #6b7890;border-radius:6px;background:#fff;color:inherit;cursor:pointer}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,select:focus-visible{outline:3px solid #165dcc}
+.sheet{--acc:#185fc7;--tint:#cfe2ff;--tint2:#ffe2b8;--wash:#edf5ff;width:min(100%,215.9mm);margin:18px auto;background:#fff;padding:10mm 11mm;border-radius:16px;box-shadow:0 10px 30px #1c335318}
+.sheet[data-level="2"]{--acc:#00766c;--tint:#bfeedd;--tint2:#ffe2b8;--wash:#e5f8f2}
+.sheet[data-level="3"]{--acc:#7437ad;--tint:#e3cffa;--tint2:#ffe2b8;--wash:#f3ebff}
+.head{display:grid;grid-template-columns:1fr 58px;gap:10px;align-items:center;padding:6px 12px;background:var(--wash);border-left:6px solid var(--acc);border-radius:10px}
+.badge{display:inline-block;background:var(--acc);color:#fff;padding:2px 8px;border-radius:4px;font-weight:700;font-size:12px}
+.head h2{margin:2px 0;font-size:24px;line-height:1.1;color:var(--acc)}
+.meta{font-size:12px;margin:0}
+.head svg{width:58px;height:46px}
+.ex{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:4px 14px;border:1px solid #cad5e4;border-radius:9px;margin:7px 0;padding:6px 10px}
+.ex h3{grid-column:1/-1;margin:0;font-size:15px;color:var(--acc);display:flex;gap:7px;align-items:center}
+.num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#fff;font-size:12px;flex:none}
+.q p{margin:0 0 4px;font-size:15px}
+.resp{margin-top:6px;border-bottom:1px solid var(--soft);height:20px;font-size:12px;color:#5b6880}
+.tip{margin-top:4px;font-size:12.5px;border:1px dashed var(--acc);border-radius:6px;padding:2px 6px;background:#fff}
+.figs{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;justify-content:center;min-height:30mm}
+.figs.col{flex-direction:column;align-items:stretch}
+.figs svg{display:block;max-width:100%}
+.blank{width:100%;height:30mm;border:1.5px dashed var(--soft);border-radius:8px;position:relative}
+.blank span{position:absolute;right:6px;bottom:3px;font-size:11px;color:#7a869a}
+.key{margin-top:6px}
+.cut{border-top:1.5px dashed #536078;padding-top:3px;font-size:11px;color:#536078}
+.key h4{margin:3px 0;font-size:14px;color:var(--acc)}
+.ans{display:grid;grid-template-columns:minmax(0,34fr) minmax(0,66fr);gap:2px 10px;border:1px solid #d6dfeb;border-left:3px solid var(--acc);border-radius:7px;padding:4px 8px;margin:5px 0;font-size:13px}
+.ans .figs{min-height:0;justify-content:flex-start}
+.ans p{margin:1px 0}
+.track{font-size:11.5px;color:#465269}
+.legend{font-size:11.5px;border-top:1px solid #a7b0bf;margin-top:6px;padding-top:4px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.legend svg{vertical-align:middle}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;line-height:1;font-weight:600;margin:0 1px;font-size:.95em}
+.fr span:first-child{border-bottom:1.5px solid currentColor;padding:0 2px 1px}
+.fr span:last-child{padding:1px 2px 0}
+.hide-key .key{visibility:hidden}
+@media(max-width:600px){nav{margin:8px}.sheet{padding:12px;border-radius:10px}.ex,.ans{grid-template-columns:1fr}.head h2{font-size:20px}}
+@page{size:letter;margin:10mm}
+@media print{
+ *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ body{background:#fff}
+ nav{display:none}
+ .sheet{width:auto;margin:0;padding:0;border-radius:0;box-shadow:none;height:255mm;overflow:hidden;break-after:page}
+ .sheet:last-child{break-after:auto}
+ .top{height:137mm;overflow:hidden}
+ .key{height:118mm;margin:0;overflow:hidden}
+ .head{padding:4px 10px}.head h2{font-size:20px}
+ .q p{font-size:13.5px;line-height:1.3}
+ .ex h3{font-size:14px}
+ .hide-key .key{visibility:visible}
+ .ex{margin:5px 0;padding:4px 9px}
+ .figs{min-height:22mm}
+ .blank{height:20mm}
+ .tip{font-size:11.5px;padding:1px 5px}
+ .ans .figs{min-height:0}
+}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <pattern id="pDot" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.4" fill="#27324a"/></pattern>
+  <pattern id="pHatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="2" height="6" fill="#27324a"/></pattern>
+  <pattern id="pCross" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M1 1L7 7M7 1L1 7" stroke="#27324a" stroke-width="1.3"/></pattern>
+ </defs>
+</svg>

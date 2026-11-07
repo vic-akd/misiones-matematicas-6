@@ -1,0 +1,9 @@
+/* ========== VISTAS: piezas comunes de cada ficha ========== */
+const stageName=i=>["Con apoyo","Con apoyo","Práctica","Práctica","Práctica","Práctica","Misión con pista","Misión con pista","Comprobación","Comprobación"][i];
+const icon=l=>'<svg viewBox="0 0 64 50" aria-hidden="true"><rect x="2" y="2" width="60" height="46" rx="9" fill="#fff" stroke="var(--acc)" stroke-width="2"/>'+
+ (l===1?'<circle cx="32" cy="25" r="16" fill="var(--tint)" stroke="var(--acc)" stroke-width="2"/><path d="M32 9V41M16 25H48" stroke="var(--acc)" stroke-width="2"/>'
+ :l===2?'<rect x="10" y="13" width="44" height="10" fill="var(--tint)" stroke="var(--acc)" stroke-width="2"/><rect x="10" y="28" width="44" height="10" fill="var(--tint2)" stroke="var(--acc)" stroke-width="2"/><path d="M21 13v10M32 13v10M43 13v10M24.7 28v10M39.3 28v10" stroke="var(--acc)" stroke-width="1.5"/>'
+ :'<text x="32" y="23" font-size="13" font-weight="700" text-anchor="middle" fill="var(--acc)">½ = 0.5</text><text x="32" y="40" font-size="13" font-weight="700" text-anchor="middle" fill="var(--acc)">= 50%</text>')+'</svg>';
+const legend='<div class="legend"><span>'+svg(18,14,cellFill(1,1,16,12,1)+'<rect x="1" y="1" width="16" height="12" fill="none" '+sw+'/>','')+' parte marcada</span><span>'+svg(18,14,cellFill(1,1,16,12,2)+'<rect x="1" y="1" width="16" height="12" fill="none" '+sw+'/>','')+' parte agregada</span><span>'+svg(18,14,cellFill(1,1,16,12,3)+'<rect x="1" y="1" width="16" height="12" fill="none" '+sw+'/>','')+' parte quitada</span><span>Acepta respuestas equivalentes salvo que se pida una forma.</span><span class="sello"><img alt="" width="9" height="11" src="'+CONFIG.LOGO+'"> '+CONFIG.AUTOR+' · '+CONFIG.APP+' '+CONFIG.VERSION+' · '+CONFIG.GRADO+' · '+CONFIG.LICENCIA.nombre+'</span></div>';
+const track='<p class="track">Cómo lo resolvió: □ Solo &nbsp; □ Con pista &nbsp; □ Con ejemplo</p>';
+const titles=["Lee la figura","Haz la operación","Resuelve el reto"];
